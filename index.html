@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>One Month, One Beautiful Beginning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!--
+    PHOTO GUIDE:
+    Replace these 5 files inside /assets/images/ with your real photos:
+    1. photo1.jpg -> Page 1 hero photo
+    2. photo2.jpg -> Page 2 memory photo
+    3. photo3.jpg -> Page 3 apology/thank you photo
+    4. photo4.jpg -> Page 4 trust/respect photo
+    5. photo5.jpg -> Page 5 final wish photo
+    (Placeholder photos are already included so the site never looks broken
+    even before you add your own.)
+
+    SONG GUIDE:
+    Put your song in /assets/music/ and rename it to song.mp3
+    The song starts after clicking the opening screen button.
+    If no song is added, the site still works fine — the music button
+    simply won't play anything.
+  -->
+
+  <audio id="bgMusic" src="assets/music/song.mp3" loop preload="none"></audio>
+
+  <div class="start-screen" id="startScreen">
+    <div class="start-card">
+      <div class="heart-pulse" aria-hidden="true">❤️</div>
+      <h1>One Month, One Beautiful Beginning</h1>
+      <p>A small surprise is waiting for you...</p>
+      <button id="startBtn" type="button">Click to begin</button>
+      <span>Music will start after this click 🎵</span>
+    </div>
+  </div>
+
+  <main class="website" id="website">
+    <nav class="top-nav">
+      <div class="brand">One Month ❤️</div>
+      <div class="nav-dots" id="navDots" role="tablist" aria-label="Page navigation">
+        <button class="dot active" data-page="0" type="button" aria-label="Page 1"></button>
+        <button class="dot" data-page="1" type="button" aria-label="Page 2"></button>
+        <button class="dot" data-page="2" type="button" aria-label="Page 3"></button>
+        <button class="dot" data-page="3" type="button" aria-label="Page 4"></button>
+        <button class="dot" data-page="4" type="button" aria-label="Page 5"></button>
+      </div>
+      <button class="music-btn" id="musicBtn" type="button" aria-label="Toggle music">🔊</button>
+    </nav>
+
+    <section class="page active page-one" aria-label="Page 1 of 5">
+      <div class="floating-hearts" aria-hidden="true"></div>
+      <div class="content glass">
+        <p class="mini-title">Page 1 / 5</p>
+        <h2>One Month, One Beautiful Beginning ❤️</h2>
+        <p>Aaj hamari baat shuru hue ek mahina ho gaya.</p>
+        <p>Shayad ye sirf 30 din hain, lekin mere liye in 30 dino ki har conversation, har smile aur har chhoti si baat bahut special ban gayi hai.</p>
+      </div>
+      <div class="photo-frame rotate-left">
+        <img src="assets/images/photo1.jpg" alt="Your first beautiful memory" loading="lazy">
+      </div>
+    </section>
+
+    <section class="page page-two" aria-label="Page 2 of 5">
+      <div class="photo-frame tall">
+        <img src="assets/images/photo2.jpg" alt="Special memory" loading="lazy">
+      </div>
+      <div class="content soft-card">
+        <p class="mini-title">Page 2 / 5</p>
+        <h2>Sorry, dil se...</h2>
+        <p>Sabse pehle... I'm sorry.</p>
+        <p>Agar kabhi maine bina soche tumhe pareshan kiya ho, zyada tang kiya ho, ya meri kisi baat se tumhe bura laga ho, toh dil se maafi chahta hoon.</p>
+        <p>Mera intention kabhi bhi tumhe hurt karna nahi tha.</p>
+      </div>
+    </section>
+
+    <section class="page page-three" aria-label="Page 3 of 5">
+      <div class="content glass wide">
+        <p class="mini-title">Page 3 / 5</p>
+        <h2>Thank you for being there 🌸</h2>
+        <p>Thank you... meri bakbak sunne ke liye, mujh par thoda-thoda trust karne ke liye, aur apni life ka itna sa hissa mere saath share karne ke liye.</p>
+        <p>Tumhare saath baat karke din kab nikal jaata hai, pata hi nahi chalta.</p>
+      </div>
+      <div class="polaroid-stack">
+        <div class="photo-frame small"><img src="assets/images/photo3.jpg" alt="Sweet memory" loading="lazy"></div>
+        <div class="note-card">Every small talk became a memory.</div>
+      </div>
+    </section>
+
+    <section class="page page-four" aria-label="Page 4 of 5">
+      <div class="content soft-card">
+        <p class="mini-title">Page 4 / 5</p>
+        <h2>No pressure, only honesty</h2>
+        <p>Main jaldi mein koi vaade ya pressure nahi dena chahta.</p>
+        <p>Bas itna chahta hoon ki jaise aaj hum ek dusre ke saath honestly aur khulkar baat karte hain, waise hi hamesha karte rahein.</p>
+        <p>Jo bhi rishta hamare beech bane, woh trust, respect aur care par bana ho.</p>
+      </div>
+      <div class="photo-frame rotate-right">
+        <img src="assets/images/photo4.jpg" alt="Trust respect care" loading="lazy">
+      </div>
+    </section>
+
+    <section class="page page-five" aria-label="Page 5 of 5">
+      <div class="photo-frame final-photo">
+        <img src="assets/images/photo5.jpg" alt="Happy one month" loading="lazy">
+      </div>
+      <div class="content glass final-message">
+        <p class="mini-title">Page 5 / 5</p>
+        <h2>Happy One Month ❤️</h2>
+        <p>Aur ek chhoti si request... agar kabhi main galat lagun ya meri koi baat pasand na aaye, toh chup mat rehna. Mujhe bata dena.</p>
+        <p>Main samajhne ki aur khud ko better banane ki poori koshish karunga.</p>
+        <p class="highlight">Thank you for making this one month so memorable.</p>
+        <h3>Happy One Month... and thank you for being you. 🌸</h3>
+      </div>
+    </section>
+
+    <div class="controls">
+      <button id="prevBtn" type="button">← Back</button>
+      <button id="nextBtn" type="button">Next →</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
